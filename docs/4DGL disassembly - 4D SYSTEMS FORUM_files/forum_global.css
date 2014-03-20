@@ -1,0 +1,501 @@
+/* GLOBAL  */
+
+/* Prevent borders for tables inside the master table */
+.tables td td {
+	border: none;
+}
+
+.ghost {
+	display: none;
+}
+
+/* ALBUMS  */
+
+.albumWrap {
+	background-color:	#FFFFFF;
+	border:			1px solid #CCCCCC;
+	float:			left;
+}
+
+.album_wrapper:hover {
+	border:	1px solid #3B5998;
+}
+
+.editable_photo_wrapper {
+	display:	inline-block;
+	position:	relative;
+	width:		200px;
+	text-align:	center;
+	float:		left;
+	margin:		10px;
+}
+
+.editable_photo_thumbnail {
+	display:		inline-block;
+	position:		relative;
+	width:			200px;
+	height:			160px;
+	text-align:		center;
+	background-position:	center 48%;
+	background-repeat:	no-repeat;
+	border-top:		1px solid #DDDDDD;
+	border-right:		1px solid #DDDDDD;
+	border-left:		1px solid #DDDDDD;
+	background-color:	#fff;
+}
+
+.editable_photo_desc {
+	height:	70px;
+	width:	200px;
+	border:	1px solid #DDDDDD;
+	float:	left;
+}
+
+.captionArea {
+	height:		61px;
+	width:		192px;
+	border:		none;
+	resize:		none;
+	color:		#000000;
+	font-family:	Arial;
+	font-size:	11px;
+	padding:	4px 4px 4px 4px;
+	float:		left;
+}
+
+.inline_edit_textbox {
+	border:			none;
+	padding:		2px;
+	margin:			0px;
+	border:			#fff 1px none;
+	background-color:	transparent;
+}
+
+.inline_edit_textbox:hover {
+	border:			#abadb3 1px solid;
+	padding:		1px;
+	background-color:	transparent;
+}
+
+.inline_edit_textbox:focus {
+	border:			#abadb3 1px solid;
+	padding:		1px;
+	background-color:	#FFFFFF;
+	color: #000000;
+}
+
+#publish_photos {
+	display:	none;
+	background:	#ffffff;
+	bottom:		0px;
+	position:	fixed;
+	width:		972px;
+	z-index:	1010; 
+}
+
+.photo_desc {
+	word-break: break-all;
+	width:auto;
+}
+
+.photo_wrapper_dropdown {
+	background:	#333;
+	float:		left;
+	display:	none;
+}
+
+.editable_photo_wrapper a:hover div.mainmenu {
+	display:	block;
+}
+
+.hover_tooltip {
+	display:	inline;
+	position:	relative;
+	font-size:	11px;
+	font-weight:	normal;
+}
+
+.hover_tooltip:hover {
+	text-decoration:	none;
+}
+
+.hover_tooltip:hover:after {
+	background:		#111;
+	background-color:	#000000;
+	border-radius:		5px;
+	bottom:			25px;
+	color:			#fff;
+	content:		attr(hover_title);
+	display:		inline-block;
+	left:			0px;
+	padding:		5px 15px;
+	position:		absolute;
+	white-space:		nowrap;
+	z-index:		98;
+}
+
+.hover_tooltip:hover:before {
+	border:		solid;
+	border-color:	#111 transparent;
+	border-width:	6px 6px 0 6px;
+	top:		-12px;
+	content:	"";
+	display:	inline-block;
+	left:		100%;
+	position:	absolute;
+	z-index:	9999;
+	margin:		0px 10px 0px 10px;
+}
+
+.thumbnail {
+	background:	none repeat scroll 0 0 #FFFFFF;
+	border:		1px solid #CCCCCC;
+	height:		116px;
+	outline:	medium none;
+	padding:	4px;
+	width:		149px;
+	display:	inline-block;
+}
+
+.thumbnail a {
+	background-color:	#EEEEEE;
+	background-size: cover;
+	display:		inline-block;
+	height:			116px;
+	vertical-align:		middle;
+	width:			149px;
+	background-position: 50% 25%;
+	background-repeat:	no-repeat;
+}
+
+.thumbnail:hover {
+	border:	1px solid #3B5998;
+}
+
+.thumbnail_dropdown_arrow {
+	width:			19px;
+	float:			left;
+	height:			19px;
+	background:		url("/images/album/dropdown-arrow.png") no-repeat scroll right 0 transparent;
+	background-position:	left 0px;
+	position:		absolute;
+	top:			7px;
+	left:			172px;
+	text-indent:		-99999px;
+}
+
+.thumbnail_dropdown_arrow:hover {
+	background-position: left 0;
+}
+
+.thumbnail_dropdown_arrow:active {
+	background-position: right 0;
+}
+
+.thumbnail_dropdown_arrow:focus {
+	background-position: right 0;
+}
+
+.thumbnails {
+	margin:		0px;
+	padding:	0px;
+	list-style:	none;
+}
+
+.thumbnails li {
+	display:	inline-block;
+	margin:		10px;
+	vertical-align:	top;
+	height:		auto;
+	*display:	inline;
+	zoom:		1;
+}
+
+.thumbnail_desc {
+	width:		150px;
+	word-wrap:	break-word;
+	padding:	4px;
+}
+.photo_wrapper_dropdown > div {
+	display: 	none;
+	top:		25px;
+	left:		26px;
+
+}
+.photo_container{
+	background-color: #ededed !important;
+	height:			540px;
+	text-align:		center;
+	width:          720px;
+}
+.breadcrumbs {
+    word-break:    break-all;
+    margin-right: 20px;
+}
+.bbc_img {	
+	max-width: 100%;
+	max-height: 650px;
+	cursor: pointer;
+}
+/* css for lightbox image viewer */
+#lightboxOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
+  opacity: 0.85;
+  display: none;
+}
+#lightbox {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  text-align: center;
+  line-height: 0;
+  font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+  font-weight: normal;
+}
+#lightbox img {
+  width: auto;
+  height: auto;
+}
+#lightbox a img {
+  border: none;
+}
+.lb-outerContainer {
+  position: relative;
+  background-color: white;
+  *zoom: 1;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+ }
+.lb-outerContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.lb-container {
+  padding: 10px;
+}
+.lb-loader {
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  height: 25%;
+  width: 100%;
+  text-align: center;
+  line-height: 0;
+}
+.lb-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+.lb-container > .nav {
+  left: 0;
+}
+.lb-nav a {
+  outline: none;
+}
+.lb-prev, .lb-next {
+  width: 49%;
+  height: 100%;
+  background-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+  /* Trick IE into showing hover */
+  display: block;
+}
+.lb-prev {
+  left: 0;
+  float: left;
+}
+.lb-next {
+  right: 0;
+  float: right;
+}
+.lb-prev:hover {
+  background: url(/images/lightbox2/prev.png) left 48% no-repeat;
+}
+.lb-next:hover {
+  background: url(/images/lightbox2/next.png) right 48% no-repeat;
+}
+.lb-dataContainer {
+   background-color: white;
+  margin: 0 auto;
+  padding-top: 0px;
+  *zoom: 1;
+  width: 100%;
+ 
+}
+.lb-dataContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.lb-data {
+  color: #bbbbbb;
+}
+.lb-data .lb-details {
+  width: 65%;
+  float: left;
+  text-align: left;
+  line-height: 1.1em;
+}
+.lb-data .lb-caption {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1em;
+  
+}
+.lb-data .lb-number {
+  display: block;
+  clear: left;
+  font-size: 11px;
+  padding-left:10px;
+  font-weight:bold;
+  
+}
+.lb-data .lb-close {
+  margin-right:10px;
+  float: right;
+  padding-bottom: 0.5em;
+  outline: none;
+}
+
+.lb-data .lb-save {
+  margin-right:8px;
+  float: right;
+  outline: none;
+}
+.lb-data .lb-close:hover {
+  cursor: pointer;
+}
+/* css for fixing table layout to work css word wrap */
+.post_body{
+  table-layout: fixed;
+}
+/* css for word wrapping in post */
+.post{
+  word-wrap: break-word;
+  line-height: 1.6;
+}
+.quote {
+	width:90%;
+	text-align:left;
+	margin: auto;
+}
+.quote_body {
+	margin-top:2px;
+	border:1px inset;
+	border-bottom:1px solid #E8E8E8;
+	border-right:1px solid #E8E8E8;
+	padding:6px;
+	spacing:3px;
+}
+.codebox {
+	text-align:left;
+	width:630px;
+	margin: auto;
+}
+.codebox_body {
+	margin: auto;
+	padding:6px;
+	border:1px inset;
+	border-bottom:1px solid #E8E8E8;
+	border-right:1px solid #E8E8E8;
+	width:630px;
+	max-height: 513px;
+	overflow:auto;
+	text-align:left;
+}
+/* This css used for avatar, profile picture and manage attachment */
+
+.linkAvatarProfile:hover, .attach:hover{
+    color:#FF0000;
+} 
+#uploadAvatar, #uploadProfile {
+	padding: 0;	
+	list-style: none;
+	margin: 0;
+}
+#filesAdd, #profile_filesAdded, #attachment_list{
+	padding: 0; 
+	list-style: none; 
+ 	margin: 0;
+}
+#filesAdd .file span,	#filesAdd .file a, #profile_filesAdded .file span,	#profile_filesAdded .file a , #attachment_list .file span,	#attachment_list .file a{
+	padding: 0 4px;
+}
+#uploadAvatar .file-invalid, #uploadProfile .file-invalid, #attachment_list .file-invalid  {
+	cursor: pointer;
+	color: #514721;
+	padding-left: 48px;
+	line-height: 24px;
+	background: url(/images/js/uploader/error.png) no-repeat 24px 5px;	
+	margin-bottom: 1px;
+}
+#uploadAvatar .file-invalid span, #uploadProfile .file-invalid span, #attachment_list .file-invalid span {
+	background-color: #fff6bf;
+	padding: 1px;
+}
+.progressText{
+	text-align:center; 
+	line-height: 10px; 
+	font-size:10px
+}
+#attachment_list ul {
+	list-style: none ; 
+	margin: 0px; 
+	padding: 0px;
+}
+#attachment_list li{
+	margin:1px; 
+	padding:0px;
+}
+
+.preview_skin {
+	font-size: 13px;
+	color: #000000;
+	background-color: #FFF6C3;
+	border-bottom: 1px solid #FE8;
+	text-align: center;
+	padding: 8px;
+	top: 0px;
+	width: 100%;
+	position: fixed;
+}
+
+.preview_skin a {
+	text-decoration: underline;
+	color: #000;
+}
+
+/* css for Facebook integration */
+/* it is used to display quick register and quick connect form for facebook */
+.fb_register {
+	margin:		auto;
+	overflow-x:	hidden;
+	padding:	5px 5px 20px;
+	width:		790px;
+}
+/* it is used to display facebook picture */
+.fb_snap {
+    float:       left;
+    padding:    1px;
+	background-color: #FFFFFF;
+	border: 1px solid #666666;
+}
+/* it is used to display facebook text on quick register, quick connect and full register page*/
+.fb_heading {
+    color:        #333333;
+    padding-bottom:    20px;
+    vertical-align:    top;
+    margin-left:    73px;
+}

@@ -1,0 +1,31 @@
+PoGa Dev Kit("PoGa-GOLDELOX")
+------------------------------
+A construction kit or later assembled Homebrew Gaming Console with pixel display, serial communication and card reader. In year 2012 4dsystems stopped solds. The system uses EVE(Extensible Virtual Engine), a proprietary high performance virtual processor implemented as PmmC(Personality-module-micro-Code). The advantage, the user creates their own code from 4dgl, improvements of EVE come from 4D Systems.
+
+Project Goal
+------------
+decipher the PoGa platform tools without disassembling of windows executables
+
+Tools and state
+-----------
+disassembler - to check to output of the compiler
+runtime - a simulator equivalent to PmmC
+uploader - uploaded your binaries to PoGa
+
+[almost done]
+disassembler - handling ret unclear, tests all other opcodes
+uploader
+
+[wip]
+runtime
+
+[not started]
+assembler/compiler
+terminal
+poga explorer
+
+TODO:
+	poga explorer
+	check if the limitation hardware based of controlled from software(compiler or pmmc)
+	an adequate assembler/compiler
+

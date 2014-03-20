@@ -1,0 +1,25 @@
+Connection establishment
+------------------------
+required:
+	right serial port
+	supported connection speed
+	timeout(errors in a serial session can causes driver crashes!)
+	
+    ser.setDTR(True)
+    ser.setDTR(False)
+    ser.flushInput()
+    ser.flushOutput()
+
+device initialisation
+---------------------
+The initator sends "4dgl"(all strings arent c string), wait some time or repeat it
+Device response with "G"
+Initator send L<NUMBER OF 64 BYTE BLOCKS TO SEND AS A CHARACTER>, L probably stands for loading
+DEVICE answers with <NUL>
+
+transport phase
+---------------
+every block has a size of 64 bytes and a checksum
+last block should fill out
+checksum is a character which compute sum of all ascii and flipped
+the device response all packets with <NUL>, the last get additionally a <ACK>
